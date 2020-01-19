@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-arrow-left" viewBox="0 0 14 24">
+    <path d="M1.088 13.06a1.5 1.5 0 0 1 0-2.12l9.546-9.547a1.5 1.5 0 1 1 2.121 2.122L4.27 12l8.485 8.485a1.5 1.5 0 1 1-2.12 2.122L1.087 13.06zm2.474.44H2.149v-3h1.413v3z"/>
+</symbol><symbol id="icon-arrow-right" viewBox="0 0 14 24">
+    <path d="M12.623 13.06a1.5 1.5 0 0 0 0-2.12L3.077 1.392A1.5 1.5 0 1 0 .956 3.515L9.44 12 .956 20.485a1.5 1.5 0 1 0 2.12 2.122l9.547-9.546zm-2.474.44h1.413v-3H10.15v3z"/>
+</symbol><symbol id="icon-facebook" viewBox="0 0 10 19">
+    <title>
+        facebook
+    </title>
+    <path d="M9.766.157v2.946H8.014c-.64 0-1.071.134-1.295.402-.223.268-.335.67-.335 1.205v2.11h3.27l-.435 3.303H6.384v8.471H2.97v-8.47H.123V6.82H2.97V4.387c0-1.384.387-2.457 1.161-3.22C4.904.404 5.934.023 7.222.023c1.093 0 1.941.045 2.544.134z" fill-rule="evenodd"/>
+</symbol></svg>
