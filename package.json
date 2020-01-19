@@ -63,7 +63,7 @@
     "svg4everybody": "^2.1.9",
     "through2": "^2.0.1",
     "webpack": "^2.2.1",
-    "webpack-bundle-analyzer": "^1.5.3"
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "dependencies": {
     "slick": "^1.12.2",
