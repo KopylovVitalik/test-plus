@@ -1,32 +1,33 @@
 body
-	background: #FFF
-	font-family: $avenir
-	font-size: 18px
-	line-height: 1.33
-	+sm 
-		font-size: 16px
+  background: #FFF
+  font-family: $avenir
+  font-size: 18px
+  line-height: 1.33
+  font-weight: 400
+  +sm 
+    font-size: 16px
 
 .text-decorated
-	display: inline-block
-	position: relative
-	// box-shadow: inset 0 -0.2em 0 0 $green
-	// background-image: linear-gradient(to top, trasparent, transparent 0.1em, $green 0.1em, $green 0.3em, transparent 0.3em, transparent)
-	background: linear-gradient(to top, transparent, transparent 0.1em, $green 0.1em, $green 0.3em, transparent 0.3em, transparent)
-	// &:after
-	// 	content: ''
-	// 	position: absolute
-	// 	left: 0
-	// 	right: 0
-	// 	bottom: 0
-	// 	height: 12px
-	// 	background-color: $green
-	// 	z-index: -1
+  display: inline-block
+  position: relative
+  // box-shadow: inset 0 -0.2em 0 0 $green
+  // background-image: linear-gradient(to top, trasparent, transparent 0.1em, $green 0.1em, $green 0.3em, transparent 0.3em, transparent)
+  background: linear-gradient(to top, transparent, transparent 0.1em, $green 0.1em, $green 0.3em, transparent 0.3em, transparent)
+  // &:after
+  // 	content: ''
+  // 	position: absolute
+  // 	left: 0
+  // 	right: 0
+  // 	bottom: 0
+  // 	height: 12px
+  // 	background-color: $green
+  // 	z-index: -1
 
 .text-medium
-	font-weight: 500
+  font-weight: 600
 
 .text-bold
-	font-weight: 700
+  font-weight: 700
 
 .board-title
   font-size: 48px
@@ -34,4 +35,12 @@ body
   line-height: 1
 
 .text-green
-	color: $green
+  color: $green
+
+.add-btn
+  display: inline-block
+  color: $green
+  font-size: 40px
+  background-color: transparent
+  transition: transform $tr
+  transform-origin: 50% 50%

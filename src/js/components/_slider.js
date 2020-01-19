@@ -17,18 +17,14 @@ import { buildIcon } from '../utils';
 
 DOC.ready(() => {
   const slider = $('.js-slider');
-  const overlay = $('.js-slider-overlay');
 
   slider.on('init', function(slick) {
-    slick = $(slick.currentTarget);
     initControls();
     slider.addClass(INIT);
   });
 
   slider.on('afterChange', (event, slick, currentSlide) => {
     // PAUSE ALL VIDEOS
-    overlay.removeClass(ACTIVE);
-    console.log(slick);
     // if (WIN_WIDTH > widthMD) {
     //   const videos = $('.slider__slide video');
     //   videos.each((i, el) => {
@@ -44,9 +40,7 @@ DOC.ready(() => {
     // }
   });
 
-  slider.on('beforeChange', (event, slick, currentSlide) => {
-    overlay.addClass(ACTIVE);
-  });
+  slider.on('breakpoint', () => initControls());
 
   slider.slick({
     speed: 800,
@@ -94,5 +88,6 @@ function initControls() {
     const video = slide.find('video')[0];
     video.play();
     slide.addClass('is-playing').removeClass(PAUSED);
+    console.log('play');
   });
 }

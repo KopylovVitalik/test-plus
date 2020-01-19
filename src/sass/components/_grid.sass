@@ -10,6 +10,9 @@
     padding-bottom: 12.5%
     position: relative
     box-shadow: 0 0 0 1px #DEDEDE inset
+    +md 
+      +fsize(25%)
+      padding-bottom: 25%
     +sm 
       +fsize(33.333%)
       padding-bottom: 33.333%
@@ -18,13 +21,23 @@
     &--first
       +fsize(25%)
       box-shadow: none
-      +sm 
+      +md 
+        +fsize(100%)
+      +sm
         +fsize(100%)
       .board-title
         position: absolute
         top: 50%
         left: 0
         transform: translateY(-50%)
+    &--last
+      .add-btn
+        +vcenter
+      +sm 
+        order: 30
+      +hover
+        .add-btn
+          transform: translate(-50%, -50%) scale(1.2)
 
 .card
   +cover
@@ -42,3 +55,12 @@
     font-size: 14px
   &__summ
     font-size: 9px
+
+@for $i from 1 through 32 
+  +sm
+    .sm-order-#{$i}
+      order: $i
+
+.sm-dn 
+  +sm 
+    display: none

@@ -1,0 +1,35 @@
+.footer
+  padding: 24px 0
+  background-color: $lightBG
+  font-size: 14px
+  font-weight: 500
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +sm 
+      flex-direction: column
+  &__left
+    text-align: center
+    margin-bottom: 24px
+
+.social-menu
+  &__list
+    display: flex
+  &__item
+    padding: 0 5px
+  &__link
+    display: inline-block
+    height: 30px
+    border-radius: 50%
+    transition: background-color $tr
+    +hover
+      svg
+        fill: $green
+        color: $green
+    svg 
+      height: 100%
+      fill: #202848
+      stroke: none
+      stroke-width: 2
+      transition: fill $tr
