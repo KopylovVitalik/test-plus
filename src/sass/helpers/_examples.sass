@@ -1,0 +1,5 @@
+@for $i from 1 through 8
+  .fullpage-anim__el-inner--#{$i}
+    background-color: hsl(30 * $i, 50, 50)
+  .fullpage-anim__el--#{$i}
+    z-index: calc(100 + #{$i}*10)

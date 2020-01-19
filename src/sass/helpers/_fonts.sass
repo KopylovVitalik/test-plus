@@ -1,0 +1,25 @@
+//FONTS
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1), url("../fonts/" + $file + ".woff") format("woff")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+$avenir: 'AvenirNextCyr', sans-serif
+
+@font-face
+	+fontdefault(normal, 300, $avenir)
+	+fontpath('AvenirNextCyr-Light', 'AvenirNextCyr-Light', AvenirNextCyr-Light)
+
+@font-face
+	+fontdefault(normal, 400, $avenir)
+	+fontpath('AvenirNextCyr-Regular', 'AvenirNextCyr-Regular', AvenirNextCyr-Regular)
+
+@font-face
+	+fontdefault(normal, 500, $avenir)
+	+fontpath('AvenirNextCyr-Medi', 'AvenirNextCyr-Medi', AvenirNextCyr-Medi)
+
+@font-face
+	+fontdefault(normal, 700, $avenir)
+	+fontpath('AvenirNextCyr-Bold', 'AvenirNextCyr-Bold', AvenirNextCyr-Bold)

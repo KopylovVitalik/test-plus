@@ -1,0 +1,156 @@
+{% set items = [
+  {
+    name: 'Ігор Ліскі',
+    sum: '$250 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'MacPaw',
+    sum: '$500 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifier: 'sm-order-4'
+  },
+  {
+    name: 'V.I.Tech',
+    sum: '$100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifier: 'sm-order-4'
+  },
+  {
+    name: 'UCBI',
+    sum: '$100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'FinStream',
+    sum: '$100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Тарас Лукарчук',
+    sum: '$100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: "Мар'ян Карпик",
+    sum: '$100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Renaissance',
+    sum: '$100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  }, 
+  {
+    name: 'Canada',
+    sum: '$250 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Юрій Филюк',
+    sum: '$500 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Moris Group',
+    sum: '$250 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'HD Group',
+    sum: '$500 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Назарій Тацакович',
+    sum: '$10 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Андрій Божок',
+    sum: '$100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Андрій Палкін',
+    sum: '100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Sweden',
+    sum: '$250 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Сергій Волощук',
+    sum: '100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Тепле місто',
+    sum: '$100 000',
+    modifiers: 'sm-order-2'
+  },
+  {
+    name: 'Ігор Кисіль',
+    sum: '100 000',
+    modifiers: 'sm-order-2'
+  }
+] %}
+
+<section class="board-section">
+  <div class="board-section__inner inner">
+    <div class="board-grid">
+      <div class="board-grid__item board-grid__item--first">
+        <div class="board-title">
+          BOARD <span class="text-decorated text-bold">24</span>
+        </div>
+      </div>
+      {% set increment = 0 %}
+      {% for item in items %}
+        <div class="board-grid__item {{ item.modifier }}">
+          {% if item.name %}
+          {% set increment = increment + 1 %}
+            <div class="card" style="background-image: url(./img/grid/grid-image-{{ increment }}.png)">
+              <div class="card__content">
+                <h4 class="card__name">{{ item.name }}</h4>
+                <div class="card__summ">{{ item.sum }}</div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

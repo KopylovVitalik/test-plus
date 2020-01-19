@@ -1,0 +1,44 @@
+.board-section
+  background-color: $lightBG
+  padding: 55px 0
+
+.board-grid
+  display: flex
+  flex-wrap: wrap
+  &__item
+    +fsize(12.5%)
+    padding-bottom: 12.5%
+    position: relative
+    box-shadow: 0 0 0 1px #DEDEDE inset
+    +sm 
+      +fsize(33.333%)
+      padding-bottom: 33.333%
+    .card
+      +coverdiv
+    &--first
+      +fsize(25%)
+      box-shadow: none
+      +sm 
+        +fsize(100%)
+      .board-title
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+
+.card
+  +cover
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  background-color: rgba(#C4C4C4, 0.5)
+  background-blend-mode: multiply
+  &__content
+    background-color: $green
+    padding: 10px
+    color: $white
+    font-weight: 400
+  &__name
+    font-size: 14px
+  &__summ
+    font-size: 9px
