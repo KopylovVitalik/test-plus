@@ -12,7 +12,7 @@
   &__play
     transition: opacity 0.4s
   &__slide
-    height: 40vw
+    height: 100%
     position: relative
     &.is-playing
       .slider__pause
@@ -36,56 +36,35 @@
   &__video-buttons
     +vcenter
     z-index: 1000
+    font-size: 0
+    .video-btn
+      display: block
   &__video
     +coverdiv
     object-fit: cover
     background-color: $white
+    display: block
   &__pause
     display: none
 
 .slider-wrapper
   position: relative
 
-// .slider-overlay
-//     position: absolute
-//     top: 0
-//     left: 72px
-//     right: 72px
-//     bottom: 0
-//     background-color: $white
-//     z-index: 100000
-//     transform: scaleX(0)
-//     transform-origin: 100% 0
-//     transition: transform 0.8s
-//     &.is-active
-//       transform: scaleX(1)
-//       transform-origin: 0 0
-
-// .slick-slide
-//   transform: scaleX(0)
-//   transition: transform 0.4s
-
-// .slick-track
-//   transform: none !important
-
-// .slick-active
-//   transform: scaleX(1)
-
 .slider-btn
+  display: inline-block
   color: $green
   background-color: transparent
   .icon
     font-size: 24px
 
-// .slick-slide iframe
-//   pointer-events: none
-
 .video-btn
   display: inline-block
   height: 110px
   background-color: transparent
+  +xl 
+    height: 80px
   +sm 
-    height: 60px
+    height: 36px
   svg 
     height: 100%
 
@@ -118,3 +97,9 @@
   opacity: 0
   visibility: hidden
   transition: visility .4s,opacity .4s
+
+.slick-slide
+  & > div 
+    height: 40vw
+    +sm
+      height: 52vw

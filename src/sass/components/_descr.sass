@@ -1,4 +1,7 @@
 .descr-section
+  margin-bottom: 65px
+  +sm 
+    margin-bottom: 40px
   &__top
     padding: 68px 0
     +sm 
@@ -9,28 +12,28 @@
       text-align: center
   &__image 
     margin-bottom: 72px
+    +xl 
+      margin-bottom: 50px
     +sm 
       margin-left: -20px
       margin-right: -20px
+      margin-bottom: 32px
     img 
       display: block
       max-width: 100%
   &__bottom
-    margin-bottom: 50px
     display: flex
     justify-content: space-between
     flex-wrap: wrap
   &__bottom-block
-    +fsize(calc(50% - 65px))
-
+    +fsize(calc(50% - 66px))
+    +xl 
+      +fsize(calc(50% - 40px))
     +sm 
       +fsize(100%)
     p 
       &:not(:last-child)
         margin-bottom: 1.25em
-    // column-count: 2
-    // column-gap: 40px
-    // p 
-    //   break-inside: avoid
-    //   &:not(:last-child)
-    //     margin-bottom: 1.25em
+    &:first-child
+      +sm 
+        margin-bottom: 3em

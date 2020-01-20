@@ -3,6 +3,8 @@
   background-color: $lightBG
   font-size: 14px
   font-weight: 500
+  +sm 
+    padding-top: 30px
   &__inner
     display: flex
     align-items: center
@@ -10,8 +12,25 @@
     +sm 
       flex-direction: column
   &__left
-    text-align: center
-    margin-bottom: 24px
+    font-weight: 600
+    font-size: 14px
+    line-height: 18px
+    +sm
+      margin-bottom: 56px
+      text-align: center
+  &__right
+    position: relative
+    +sm 
+      padding-top: 30px
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        height: 2px
+        width: 44px
+        background-color: #202848
 
 .social-menu
   &__list
@@ -23,6 +42,9 @@
     height: 30px
     border-radius: 50%
     transition: background-color $tr
+    color: #202848
+    +sm 
+      height: 28px
     +hover
       svg
         fill: $green

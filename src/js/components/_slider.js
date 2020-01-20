@@ -24,19 +24,17 @@ DOC.ready(() => {
   });
 
   slider.on('afterChange', (event, slick, currentSlide) => {
-    // PAUSE ALL VIDEOS
-    // if (WIN_WIDTH > widthMD) {
-    //   const videos = $('.slider__slide video');
-    //   videos.each((i, el) => {
-    //     $(el)[0].pause();
-    //   });
-    //   // PLAY CURRENT
-    //   let slides = $('.slider__slide');
-    //   const videoCurrent = $(slides[currentSlide]).find('video')[0];
-    //   if (videoCurrent) {
-    //     $(video).removeClass(PAUSED);
-    //     videoCurrent.play();
-    //   }
+    const videos = $('.slider__slide video');
+    videos.each((i, el) => {
+      $(el)[0].pause();
+      $(el).closest('.slider__slide').removeClass('is-playing');
+    });
+    // //   // PLAY CURRENT
+    // let slides = $('.slider__slide');
+    // const videoCurrent = $(slides[currentSlide]).find('video')[0];
+    // if (videoCurrent) {
+    //   $(video).removeClass(PAUSED);
+    //   videoCurrent.play();
     // }
   });
 
